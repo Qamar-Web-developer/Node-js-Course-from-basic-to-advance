@@ -1,0 +1,19 @@
+{
+  "type": "module",
+  "scripts": {
+    "debug": "node --watch --inspect-brk app.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.0"
+  },
+  "name": "10-buffer-pool-in-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
