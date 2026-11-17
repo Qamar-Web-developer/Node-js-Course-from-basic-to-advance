@@ -3,26 +3,32 @@ import { open } from "node:fs/promises";
 import net from "node:net";
 
 const server = net.createServer(async (socket) => {
-  // const fileHandle = await open(
-  //   "C:\\Users\\anura\\OneDrive\\Desktop\\4k-video.MP4"
-  // );
+//   const fileHandle = await open(
+// "C:\\Users\\Ahmad\\Downloads\\Ali_Fani_-_Hussain!___علی_فانی_-_نوای_حسین(256k).mp3"
+//   );
+  
+
   // const fileHandle = await open("river.webp");
   // const { size } = await fileHandle.stat();
   // const readStream = fileHandle.createReadStream();
   socket.write("HTTP/1.1 200 OKAY\n");
   // socket.write("Content-Type: video/mp4\n");
+  socket.write("Content-Type: audio/mpeg")
+  socket.write("Content-Disposition: inline; filename=audio.mp3")
   // socket.write("Content-Type: text/txt; charset=utf-8\n");
-  // socket.write(`Content-Length: ${size}\n`);
+  socket.write(`Content-Length: ${size}\n`);
+  // socket.write("Content-Type: application/pdf")
   // socket.write("Content-Disposition: attachment; filename=story.mp4");
   socket.write("\n\n");
 
   // socket.end();
+  // const readStream=createReadStream("C:\\Users\\Ahmad\\Downloads\\HCI_Assignment2.pdf")
   // const readStream = createReadStream("story.mp4");
-  const readStream = createReadStream("river.webp");
+  // const readStream = createReadStream("river.webp");
   // const readStream = createReadStream("numbers.txt");
-  // const readStream = createReadStream(
-  //   "C:\\Users\\anura\\OneDrive\\Desktop\\4k-video.MP4"
-  // );
+  const readStream = createReadStream(
+  "C:\\Users\\Ahmad\\Downloads\\Ali_Fani_-_Hussain!___علی_فانی_-_نوای_حسین(256k).mp3"
+  );
   readStream.pipe(socket);
   // socket.end('{"name": "Anurag"}')
   readStream.on("end", () => {
