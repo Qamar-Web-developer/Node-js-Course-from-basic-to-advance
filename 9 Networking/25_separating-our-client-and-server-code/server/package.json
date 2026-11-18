@@ -1,6 +1,7 @@
 {
     "type": "module",
     "dependencies": {
+        "mime": "^4.1.2",
         "mime-types": "^2.1.35"
     }
 }
