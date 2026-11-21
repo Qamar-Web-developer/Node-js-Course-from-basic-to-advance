@@ -14,9 +14,12 @@ import { Buffer, constants } from "buffer";
 
 // const a = Buffer.alloc(4);
 // const z = Buffer.alloc(4);
+// console.log(a)
+const b = Buffer.allocUnsafe(4);
+const c = Buffer.allocUnsafe(4);
 
-// const b = Buffer.allocUnsafe(4);
-// const c = Buffer.allocUnsafe(4096);
+console.log(b)
+console.log(c)
 // const d= Buffer.from('ABC')
 // b[0]=81
 // c[0]=81
